@@ -14,7 +14,15 @@ $("*").keydown(function(){
     nextSequence();
     started = true;
     }
-
+});
+// For Mobile users since they have no key to press, therefore a button will solve their problem
+$("#startButton").click(function(){
+  if(!started){
+    $("h1").text("Level"+ level);
+    $("#startButton").css("display","none");
+    nextSequence();
+    started = true;
+    }
 });
 //1. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
 $(".btn").click(function() {
