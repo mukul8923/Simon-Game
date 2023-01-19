@@ -11,6 +11,7 @@ var level = 0;
 $("*").keydown(function(){
    if(!started){
     $("h1").text("Level"+ level);
+    $("#startButton").css("display","none");
     nextSequence();
     started = true;
     }
@@ -71,6 +72,7 @@ function startOver(){
     gamePattern = [];
     started = false;
     $("h1").text("Press A Key to Start");
+    $("#startButton").css("display","inline");
 }
 
 function nextSequence() {
